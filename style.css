@@ -1,0 +1,46 @@
+
+#img-div{
+    display: block;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+li{
+    text-decoration: none;
+    margin-left: 25%;
+}
+
+#img-div h1{
+    text-align: center;
+}
+
+h2, h3{
+    text-align: center;
+    padding: 20px;
+}
+
+
+p{
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+#image{
+    width: 80%;
+    max-width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+#info{
+    text-align: center;
+}
+
+#info span{
+    margin: 30px;
+    padding: 30px;
+    font-style: oblique;
+}
