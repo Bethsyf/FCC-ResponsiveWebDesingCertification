@@ -5,13 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>JavaScript</title>
 </head>
 
 <body>
+    <nav id="navbar">
+        <header>Fundamentos de JavaScript
+            <ul>
+                <li><a class="nav-link" href="#JavaScript">JavaScript</a></li>
+                <li><a class="nav-link" href="#Tipos_de_datos">Tipos de datos</a></li>
+                <li><a class="nav-link" href="#Variables_y_Constantes">Variables y Constantes</a></li>
+                <li><a class="nav-link" href="#Operadores">Operadores</a></li>
+                <li><a class="nav-link" href="#Estructuras_Condicionales">Estructuras Condicionales</a></li>
+            </ul>
+        </header>
+    </nav>
     <main id="main-doc">
-        <section class="main-section">
-            <header id="Javascript">Javascript</header>
+        <section id="JavaScript" class="main-section">
+            <header>JavaScript</header>
             <p>Javascript es un lenguaje de programación, o lo que es lo mismo, un mecanismo con el que podemos decirle
                 a nuestro navegador que tareas debe realizar, en que orden y cuantas veces (por ejemplo). Muchas de las
                 tareas que realizamos con HTML y CSS se podrían realizar con Javascript. De hecho, es muy
@@ -19,51 +31,110 @@
                 tanto no merece la pena. Sin embargo, con el tiempo veremos que Javascript nos ofrece una mayor
                 flexibilidad y un abanico de posibilidades más grande, y que bien usadas, pueden ahorrarnos bastante
                 tiempo.</p>
-            <p>Para comprenderlo, un ejemplo muy sencillo sería el siguiente: Imaginemos que tenemos que crear una lista
-                de números desde el 1 hasta el 500. Hacerlo solamente con HTML sería muy tedioso, ya que tendríamos que
-                copiar y pegar esas filas varias veces hasta llegar a 500. Sin embargo, mediante Javascript, podemos
-                decirle al navegador que escriba el primer párrafo, que luego escriba el mismo pero sumándole uno al número. Y que esto lo repita hasta llegar a 500.
-                De esta forma y con este sencillo ejemplo, con HTML habría que escribir 500 líneas mientras que con
-                Javascript no serían más de 10 líneas.</p>
+            <p>Para comprenderlo, un ejemplo muy sencillo sería el siguiente:
+            <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Número: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>numero<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Número: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>numero<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Número: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>numero<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Número: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>numero<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Número: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>numero<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+                </code></pre> Imaginemos que tenemos que crear una lista
+            de números desde el 1 hasta el 500. Hacerlo solamente con HTML sería muy tedioso, ya que tendríamos que
+            copiar y pegar esas filas varias veces hasta llegar a 500. Sin embargo, mediante Javascript, podemos
+            decirle al navegador que escriba el primer párrafo, que luego escriba el mismo pero sumándole uno al
+            número. Y que esto lo repita hasta llegar a 500.
+            De esta forma y con este sencillo ejemplo, con HTML habría que escribir 500 líneas mientras que con
+            Javascript no serían más de 10 líneas.</p>
         </section>
-        <section class="main-section">
-            <header id="Tipos de datos">Tipos de datos
-                <p></p>
-                <p></p>
-            </header>
-        </section>
-        <section class="main-section">
-            <header>
-                <p>En Javascript disponemos de los siguientes tipos de datos:
-                    <table>
-                        <td>
-                            <tr>
-                                <td>hh</td>
-                                <td>hh</td>
-                                <td>hh</td>
-                            </tr>
-                            <tr>dd</tr>
-                            <tr>dd</tr>
-                        </td>
-                    </table>
+        <section id="Tipos_de_datos" class="main-section">
+            <header>Tipos de datos</header>
+                <p>El tipo de dato es una propiedad de un valor que determina valores que puede tomar, que tipos de
+                    operaciones podemos realizar sobre este y cómo su representación interna.
+                    En JavaScript encontramos diferentes tipos de valores y tipos de datos para almacenar en variables.
                 </p>
-                <p></p>
-            </header>
+                <ul>
+                    <li>String
+                        <pre>
+                            <code>
+                            &lt;h1&gt;String&lt;/h1&gt;
+                            </code>
+                        </pre>
+                    </li>
+                    <li>Number
+                        <pre>
+                            <code>
+                            &lt;h1&gt;Number&lt;/h1&gt;
+                            </code>
+                        </pre>
+                    </li>
+                    <li>Boolean
+                        <pre>
+                            <code>
+                            &lt;h1&gt;Boolean&lt;/h1&gt;
+                            </code>
+                        </pre>
+                    </li>
+                    <li>Objetos
+                        <pre>
+                            <code>
+                            &lt;h1&gt;Objetos&lt;/h1&gt;
+                            </code>
+                        </pre>
+                    </li>
+                    <li>Undefined
+                        <pre>
+                            <code>
+                            &lt;h1&gt;Undefined&lt;/h1&gt;
+                            </code>
+                        </pre>
+                    </li>
+                    <li>Null
+                        <pre>
+                            <code>
+                            &lt;h1&gt;Null&lt;/h1&gt;
+                            </code>
+                        </pre>
+                    </li>
+                </ul>            
         </section>
-        <section class="main-section">
-            <header>
-                <p></p>
-                <p></p>
-            </header>
+        <section id="Variables_y_Constantes" class="main-section">
+            <header>Variables y Constantes</header>
+                <p>En programación, las variables son espacios donde se puede guardar información y asociarla a un
+                    determinado nombre. De esta forma, cada vez que se consulte ese nombre posteriormente, te devolverá
+                    la información que contiene. La primera vez que se realiza este paso se suele llamar inicializar una
+                    variable.</p>
+                <p>Como su propio nombre indica, una variable puede variar su contenido, ya que aunque contenga una
+                    cierta información, se puede volver a cambiar. A esta acción ya no se le llama inicializar una
+                    variable, sino declarar una variable</p>            
         </section>
-        <section class="main-section">
-            <header>
-                <p></p>
-                <p></p>
-            </header>
+        <section id="Operadores" class="main-section">
+            <header>Operadores</header>
+                <p>JavaScript tiene los siguientes tipos de operadores.</p>
+                <p>
+                <ul>
+                    <li>Operadores logicos</li>
+                    <li>operadores de comparacion</li>
+                    <li>operadores de asignacion</li>
+                </ul>
+                </p>            
         </section>
-
+        <section id="Estructuras_Condicionales" class="main-section">
+            <header>Estructuras Condicionales</header>
+                <p>Un script consiste en una lista de enunciados que se van ejecutando a medida que se cargan. Sin
+                    embargo, en ocasiones nos interesa controlar el flujo de la ejecución estableciendo alternativas, es
+                    decir, que una serie de enunciados se ejecuten en algunas ocasiones y en otras no. Para permitir
+                    esto existen las estructuras condicionales.</p>
+                <p>
+                    <ul>
+                        <li>Instrucción if</li>
+                        <li>Bucle while</li>
+                        <li>Bucle for</li>
+                        <li>Instrucción switch</li>
+                    </ul>
+                </p>
+                <span>Si quieres mas informacion dale <a href="https://lenguajejs.com/javascript/"> click aquí</a></span>            
+        </section>
     </main>
 </body>
-
 </html>
