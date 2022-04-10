@@ -1,0 +1,26 @@
+body{
+    background-color: antiquewhite;
+}
+
+#title{
+    text-align: center;    
+}
+
+p{
+    text-align: center;
+    padding: 10px;
+}
+
+#survey-form{
+    margin-left: 30%;
+}
+div{
+    margin: 5px;
+}
+
+#submit{
+    margin: auto;
+}
+#btn{
+    margin-left: 20%;
+}

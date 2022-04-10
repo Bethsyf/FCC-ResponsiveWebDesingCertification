@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1 id="title">Formulario</h1>
+            <p id="description">Rellene el formulario si presenta posibles sintomas de COVID-19 y reside en el Valle de Aburra - Antoquia</p>
+        </header>
+        <form action="" id="survey-form">
+            <div>
+            <label for="name" id="name-label">Nombres</label>
+            <input type="text" id="name" required placeholder="Ingrese sus Nombres">
+        </div><br>
+        <div>
+            <label for="lastname">Apellidos</label>
+            <input type="text" id="lastname" required placeholder="Ingrese sus Apellidos">
+        </div><br>
+        <div>
+            <label for="email" id="email-label">Correo</label>
+            <input type="email" id="email" required placeholder="Ingrese su Correo Electronico">
+        </div><br>
+        <div>
+            <label for="identification" >Documento de identidad</label>
+            <input type="number" id="identification" required placeholder="Ingrese su Numero de Identificacion">
+        </div><br>
+        <div>
+            <label for="age" id="number-label">Edad</label>
+            <input type="number" id="number" min="1" max="100" required placeholder="Ingrese su Edad">
+        </div><br>
+        <div>
+            <label for="sex">Sexo</label>
+            <input type="radio" id="sex" name="sex" value="male">Masculino
+            <input type="radio" id="sex" name="sex"value="female">Femenino 
+        </div><br>
+        <div>
+            <label for="sex">Ciudad donde reside</label>
+            <select name="city" id="dropdown">
+                <option value="v0" selected>Seleccione una Ciudad</option>
+                <option value="v1">Medellin</option>
+                <option value="v2">Sabaneta</option>
+                <option value="v3">Itagui</option>
+                <option value="v4">La Estrella</option>
+                <option value="v5">Envigado</option>
+                <option value="v6">Caldas</option>
+                <option value="v7">Bello</option>
+                <option value="v8">Barbosa</option>
+                <option value="v9">Girardota</option>
+                <option value="v10">Copacabana</option>
+            </select>
+        </div> <br>
+        <div>
+            <label for="symptom" id="symptom"><strong>Sintomas</strong> </label><br>
+            <input type="checkbox" value="va">Fiebre<br>
+            <input type="checkbox" value="vb">Tos<br>
+            <input type="checkbox" value="vc">Cansancio<br>
+            <input type="checkbox" value="vd">Perdida del Gusto o del Olfato<br>
+            <input type="checkbox" value="ve">Dificultad para Respirar<br>
+            <input type="checkbox" value="vf">Pérdida de movilidad o del habla o sensación de confusión<br>
+            <input type="checkbox" value="vg">Dolor en el pecho     
+        </div> <br>   
+        <div>
+            <label for="Obser" id="Obser"><strong> Observaciones</strong></label><br>  
+            <textarea name="Obser" id="Obser" cols="30" rows="10" placeholder="Escriba aqui cualquier informacion adicional"></textarea>
+        </div><br>
+        <div id="btn">
+            <button id="submit" type="submit">Enviar</button>
+        </div>
+        </form>
+    </main>
+</body>
+</html>
